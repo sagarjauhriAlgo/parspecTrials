@@ -5,8 +5,8 @@
 
   </div>
   <div class="w-50 d-flex align-items-center justify-content-around">
-    <div>
-      <mat-stepper class="stepper-box">
+    <div class="w-88">
+      <mat-stepper class="stepper-box" [disableRipple]="true">
         <mat-step>
           <ng-template matStepLabel>Select Products</ng-template>
           <ng-template matStepContent>
@@ -39,7 +39,7 @@
         </mat-step>
       </mat-stepper>
     </div>
-    <span class="cross-icon"><i class="fas fa-times text-light"></i></span>
+    <div class="cross-icon"><i class="fas fa-times text-light"></i></div>
   </div>
   </mat-toolbar>
 
