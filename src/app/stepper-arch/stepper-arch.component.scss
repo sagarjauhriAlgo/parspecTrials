@@ -1,17 +1,53 @@
 // Global Classes
+:host::ng-deep .mat-horizontal-stepper-header {
+  height: 44px;
+}
+
+:host::ng-deep .mat-horizontal-content-container {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  margin-top: 1%;
+}
+
+:host::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #e9eaef;
+  color: #5048E5;
+  border-radius: 35px;
+  font-size: 14px;
+}
+
+:host::ng-deep .mat-step-text-label {
+  color: white;
+}
+
+:host::ng-deep .mat-stepper-horizontal-line {
+  border-top-width: 1px;
+  border-top: 2.5px dotted white;
+}
+
 //  End of Global Classes
 
-
 // main classes
+.bg-gradient {
+  background-image: linear-gradient(to left, #6467F2, #8687d9);
+}
+
+.cross-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.stepper-box {
+  background-color: #5048E5 !important;
+  border-radius: 35px;
+}
+
 // main classes
 
 // helper classes
-.w-25 {
-  width: 25%;
-}
-
-.w-50 {
-  width: 50%;
+.w-35 {
+  width: 35%;
 }
 
 // End of helper classes

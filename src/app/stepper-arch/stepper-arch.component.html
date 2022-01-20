@@ -1,31 +1,46 @@
-<div class="d-flex justify-content-center w-100">
-  <section class="w-25">
+<!-- <section class="d-flex justify-content-between"> -->
+  <mat-toolbar class="d-flex justify-content-between bg-gradient">
 
-  </section>
-  <div class="w-50">
-    <mat-stepper>
-      <mat-step>
-        <ng-template matStepLabel>Step 1</ng-template>
-        <ng-template matStepContent>
-          <app-step1></app-step1>
-          <button mat-button matStepperNext>Next</button>
-        </ng-template>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Step 2</ng-template>
-        <ng-template matStepContent>
-          <app-step2></app-step2>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </ng-template>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Step 3</ng-template>
-        <ng-template matStepContent>
-          <app-step3></app-step3>
-          <button mat-button matStepperPrevious>Back</button>
-        </ng-template>
-      </mat-step>
-    </mat-stepper>
+  <div class="w-25">
+
   </div>
-</div>
+  <div class="w-50 d-flex align-items-center justify-content-around">
+    <div>
+      <mat-stepper class="stepper-box">
+        <mat-step>
+          <ng-template matStepLabel>Select Products</ng-template>
+          <ng-template matStepContent>
+            <app-step1></app-step1>
+            <button mat-button matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Confirm Datasheets</ng-template>
+          <ng-template matStepContent>
+            <app-step2></app-step2>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Preview Submittal</ng-template>
+          <ng-template matStepContent>
+            <app-step3></app-step3>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Share Submital</ng-template>
+          <ng-template matStepContent>
+            <app-step4></app-step4>
+            <button mat-button matStepperPrevious>Back</button>
+          </ng-template>
+        </mat-step>
+      </mat-stepper>
+    </div>
+    <span class="cross-icon"><i class="fas fa-times text-light"></i></span>
+  </div>
+  </mat-toolbar>
+
+<!-- </section> -->
