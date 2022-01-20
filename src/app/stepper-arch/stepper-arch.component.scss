@@ -1,4 +1,4 @@
-// Global Classes
+// ! Global Classes
 :host::ng-deep .mat-horizontal-stepper-header {
   height: 44px;
 }
@@ -21,22 +21,39 @@
   color: white;
 }
 
+// mat stepper seperation dotted line between steps
 :host::ng-deep .mat-stepper-horizontal-line {
   border-top-width: 1px;
   border-top: 2.5px dotted white;
 }
+// End of mat stepper seperation dotted line between steps
 
-//  End of Global Classes
+// Hover on mat stepper - border left right radius for 1st and last element
+:host::ng-deep .mat-step-header:hover:not([aria-disabled]):first-child {
+  background-color: rgba(0, 0, 0, .04);
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
 
-// main classes
+:host::ng-deep .mat-step-header:hover:not([aria-disabled]):last-child {
+  background-color: rgba(0, 0, 0, .04);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+// End of Hover on mat stepper - border left right radius for 1st and last element
+
+// ! End of Global Classes
+
+// * Main classes
 .bg-gradient {
-  background-image: linear-gradient(to left, #6467F2, #8687d9);
+  background-image: linear-gradient(to left, #6467F2, #6467F2);
+  // background-image: linear-gradient(to left, #6467F2, #8687d9);
 }
 
 .cross-icon {
   font-size: 20px;
   cursor: pointer;
-  width:3%;
+  width: 3%;
 }
 
 .stepper-box {
@@ -44,9 +61,25 @@
   border-radius: 35px;
 }
 
-// main classes
+.nav-header {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  font-family: Inter;
+  line-height: 20px;
+}
 
-// helper classes
+.nav-header2 {
+  font-size: 14px;
+  color: #C8D3FE;
+  font-weight: 400;
+  font-family: Inter;
+  line-height: 20px;
+}
+
+// * End of Main classes
+
+// * Helper classes
 .w-35 {
   width: 35%;
 }
@@ -55,4 +88,4 @@
   width: 88%;
 }
 
-// End of helper classes
+// * End of helper classes
