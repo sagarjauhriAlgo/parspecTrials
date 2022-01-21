@@ -8,6 +8,7 @@
   <div class="w-50 d-flex align-items-center justify-content-around">
     <div class="w-88">
       <mat-stepper class="stepper-box" [disableRipple]="true">
+        <!-- Step 1 -->
         <mat-step>
           <ng-template matStepLabel>Select Products</ng-template>
           <ng-template matStepContent>
@@ -15,6 +16,7 @@
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
+        <!-- Step 2 -->
         <mat-step>
           <ng-template matStepLabel>Confirm Datasheets</ng-template>
           <ng-template matStepContent>
@@ -23,6 +25,7 @@
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
+        <!-- Step 3 -->
         <mat-step>
           <ng-template matStepLabel>Preview Submittal</ng-template>
           <ng-template matStepContent>
@@ -31,6 +34,7 @@
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
+        <!-- Step 4 -->
         <mat-step>
           <ng-template matStepLabel>Share Submital</ng-template>
           <ng-template matStepContent>
@@ -38,6 +42,11 @@
             <button mat-button matStepperPrevious>Back</button>
           </ng-template>
         </mat-step>
+
+        <!-- Icon overrides. -->
+        <ng-template matStepperIcon="edit">
+          <mat-icon>done</mat-icon>
+        </ng-template>
       </mat-stepper>
     </div>
     <div class="cross-icon"><i class="fas fa-times text-light"></i></div>
