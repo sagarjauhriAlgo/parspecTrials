@@ -1,1 +1,15 @@
-<p>step2 works!</p>
+<ag-grid-angular
+    #agGrid
+    style="height: 500px;"
+    id="myGrid"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowDragManaged]="true"
+    [suppressMoveWhenRowDragging]="true"
+    [rowDragEntireRow]="rowDragEntireRow"
+    [animateRows]="true"
+    [rowData]="rowData"
+    [rowSelection]="rowSelection"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
