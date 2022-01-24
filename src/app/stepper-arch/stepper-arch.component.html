@@ -7,37 +7,46 @@
   </div>
   <div class="w-50 d-flex align-items-center justify-content-around">
     <div class="w-88">
-      <mat-stepper class="stepper-box" [disableRipple]="true">
-        <mat-step>
-          <ng-template matStepLabel>Select Products</ng-template>
+      <mat-stepper class="stepper-box" [disableRipple]="true" linear>
+        <!-- Step 1 -->
+        <mat-step label="Select Products">
+          <!-- <ng-template matStepLabel>Select Products</ng-template> -->
           <ng-template matStepContent>
             <app-step1></app-step1>
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Confirm Datasheets</ng-template>
+        <!-- Step 2 -->
+        <mat-step label="Confirm Datasheets">
+          <!-- <ng-template matStepLabel>Confirm Datasheets</ng-template> -->
           <ng-template matStepContent>
             <app-step2></app-step2>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Preview Submittal</ng-template>
+        <!-- Step 3 -->
+        <mat-step label="Preview Submittal">
+          <!-- <ng-template matStepLabel>Preview Submittal</ng-template> -->
           <ng-template matStepContent>
             <app-step3></app-step3>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
           </ng-template>
         </mat-step>
-        <mat-step>
-          <ng-template matStepLabel>Share Submital</ng-template>
+        <!-- Step 4 -->
+        <mat-step label="Share Submital">
+          <!-- <ng-template matStepLabel>Share Submital</ng-template> -->
           <ng-template matStepContent>
             <app-step4></app-step4>
             <button mat-button matStepperPrevious>Back</button>
           </ng-template>
         </mat-step>
+
+        <!-- Icon overrides. -->
+        <ng-template matStepperIcon="edit">
+          <mat-icon>done</mat-icon>
+        </ng-template>
       </mat-stepper>
     </div>
     <div class="cross-icon"><i class="fas fa-times text-light"></i></div>
