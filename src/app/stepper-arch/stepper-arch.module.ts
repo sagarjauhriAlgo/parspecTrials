@@ -10,6 +10,8 @@ import { Step3Component } from './components/step3/step3.component';
 import { Step4Component } from './components/step4/step4.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     HttpClientModule,
     AgGridModule.withComponents([]),
+    SharedModule
+  ],
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { displayDefaultIndicatorType: false }
+    }
   ]
 })
 export class StepperArchModule { }

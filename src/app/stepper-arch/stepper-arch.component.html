@@ -7,7 +7,7 @@
   </div>
   <div class="w-50 d-flex align-items-center justify-content-around">
     <div class="w-88">
-      <mat-stepper class="stepper-box" [disableRipple]="true" linear>
+      <mat-stepper #stepper class="stepper-box" [disableRipple]="STEPPER_CONFIG.isDisableRipple" [linear]="STEPPER_CONFIG.isLinear">
         <!-- Step 1 -->
         <mat-step label="Select Products">
           <!-- <ng-template matStepLabel>Select Products</ng-template> -->
@@ -44,9 +44,9 @@
         </mat-step>
 
         <!-- Icon overrides. -->
-        <ng-template matStepperIcon="edit">
+        <!-- <ng-template matStepperIcon="edit">
           <mat-icon>done</mat-icon>
-        </ng-template>
+        </ng-template> -->
       </mat-stepper>
     </div>
     <div class="cross-icon"><i class="fas fa-times text-light"></i></div>

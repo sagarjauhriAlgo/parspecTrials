@@ -10,14 +10,34 @@
   margin-top: 1%;
 }
 
+// InActive Stepper icons
 :host::ng-deep .mat-step-header .mat-step-icon {
-  background-color: #e9eaef;
+  background-color: #828ef833;
   color: #5048E5;
   border-radius: 35px;
   font-size: 14px;
 }
 
-:host::ng-deep .mat-step-text-label {
+// visited stteper icons
+:host::ng-deep .mat-step-header .mat-step-icon-state-done {
+  background-color: white;
+  color: #828DF8;
+}
+
+// active icons
+:host::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-edit {
+  background-color: white;
+  color: #828DF8;
+}
+
+// Never visited stepper header
+:host::ng-deep .mat-step-header .mat-step-label, .mat-step-header .mat-step-optional {
+  color: #828DF8;
+  font-size: 14px;
+}
+
+// Active Label Header
+:host::ng-deep .mat-step-header .mat-step-label.mat-step-label-active {
   color: white;
 }
 
@@ -28,6 +48,19 @@
 }
 // End of mat stepper seperation dotted line between steps
 
+// :host::ng-deep .mat-horizontal-stepper-header {
+//   &[ng-reflect-active='false']+.mat-stepper-horizontal-line {
+//       border-top: 2.5px dotted #828DF8;
+//   }
+
+//   &[ng-reflect-selected='true']+.mat-stepper-horizontal-line {
+//       border-top: 2.5px dotted #828DF8;
+//   }
+// }
+
+:host::ng-deep .mat-horizontal-stepper-header[aria-selected='true'] ~ .mat-stepper-horizontal-line{
+  border-top: 2.5px dotted #828DF8;
+}
 // Hover on mat stepper - border left right radius for 1st and last element
 :host::ng-deep .mat-step-header:hover:not([aria-disabled]):first-child {
   background-color: rgba(0, 0, 0, .04);
